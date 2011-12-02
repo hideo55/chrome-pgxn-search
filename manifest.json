@@ -1,0 +1,26 @@
+{
+  "name": "PGXN Search",
+  "version": "0.0.1",
+  "description": "Helper extension for PGXN (pgxn.org)",
+  "icons": {
+    "32": "icons/pgxn-32.png",
+    "64": "icons/pgxn-64.png",
+    "128": "icons/pgxn-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/pgxn-32.png",
+    "default_title": "PGXN Search"
+  },
+  "background_page": "background.html",
+  "content_script": {
+    "matches": ["http://pgxn.org"],
+    "js": "content_script.js",
+    "run_at": "document_end"
+  },
+  "omnibox": {
+    "keyword": "PGXN"
+  },
+  "permissions": ["background", "tabs", "notifications", "http://api.pgxn.org/*", "http://master.pgxn.org/*"],
+  "homepage_url": "https://github.com/hideo55/chrome-pgxn-search",
+  "options_page": "options.html"
+}
