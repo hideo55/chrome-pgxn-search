@@ -102,10 +102,9 @@ function loadFeed() {
 
 loadFeed();
 
-var n;
 function notify(title, message, link, display) {
   if(webkitNotifications.checkPermission() == 0) {
-    n = webkitNotifications.createNotification('icons/pgxn-32.png', title, message);
+    var n = webkitNotifications.createNotification('icons/pgxn-32.png', title, message);
     n.ondisplay = function() {
       setTimeout(function() {
         n.cancel();
